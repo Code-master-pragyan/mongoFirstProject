@@ -132,10 +132,6 @@ app.delete("/chats/:id", async (req, res, next) => {
 
 })
 
-app.get("/", (req, res) => {
-    res.send("working");
-})
-
 app.use((err, req, res, next) => {
     let { status = 500, message = "some error occured" } = err;
     res.status(status).send(message);
