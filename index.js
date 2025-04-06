@@ -24,6 +24,10 @@ async function main() {
     await mongoose.connect("mongodb://127.0.0.1:27017/fakewhatsapp")
 }
 
+// start page
+app.get("/", (req, res) => {
+    res.send("API is working . go to /chats to see the chats");
+})
 // index route
 
 app.get("/chats", async (req, res) => {
